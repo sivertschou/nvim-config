@@ -8,3 +8,11 @@ vim.keymap.set("n", "<C-_>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminals" 
 
 vim.keymap.set("n", "+", "<cmd>vertical resize +5<cr>", { desc = "Increase window width" })
 vim.keymap.set("n", "-", "<cmd>vertical resize -5<cr>", { desc = "Decrease window width" })
+
+vim.keymap.set("n", "√", "<cmd>Gitsigns next_hunk<cr>", { desc = "Go to next hunk" })
+vim.keymap.set("n", "ª", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Go to previous hunk" })
+vim.keymap.set("n", "<leader>ga", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage hunk" })
+vim.keymap.set("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Undo stage hunk" })
+vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" })
+vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Reset hunk" })
+vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_lin<cr>", { desc = "Blame line" })
