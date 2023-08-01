@@ -22,3 +22,7 @@ vim.keymap.set("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = 
 vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview hunk" })
 vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Reset hunk" })
 vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_lin<cr>", { desc = "Blame line" })
+
+-- LSP
+vim.keymap.set("n", "¬", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+vim.keymap.set("n", "º", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
