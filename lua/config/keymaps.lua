@@ -4,6 +4,9 @@
 
 vim.keymap.set("n", "<C-q>", "<cmd>q<cr>", { desc = "Close file" })
 
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files" })
+
 vim.keymap.set("n", "<C-_>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminals" })
 
 vim.keymap.set("n", "+", "<cmd>vertical resize +5<cr>", { desc = "Increase window width" })
