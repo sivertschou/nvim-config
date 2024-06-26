@@ -8,8 +8,16 @@ vim.keymap.set("n", "-", "<cmd>vertical resize -5<cr>", { desc = "Decrease windo
 vim.keymap.set("n", "<C-q>", "<cmd>q<cr>", { desc = "Close file" })
 
 -- Telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find files" })
+local telescope = require("telescope.builtin")
+vim.keymap.set("n", "<C-p>", telescope.git_files, { desc = "Find files (git_files)" })
+vim.keymap.set("n", "<leader>sg", function()
+  telescope.live_grep({
+    file_ignore_patterns = { ".git/", ".cache", "node_modules/" },
+    additional_args = function(_)
+      return { "--hidden" }
+    end,
+  })
+end, { desc = "Live grep (hidden)" })
 
 -- ToggleTerm
 vim.keymap.set("n", "<C-_>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminals" })
