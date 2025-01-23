@@ -21,6 +21,7 @@ end, { desc = "Live grep (hidden)" })
 
 -- ToggleTerm
 vim.keymap.set("n", "<C-_>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminals" })
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Gitsings
 vim.keymap.set("n", "√", "<cmd>Gitsigns next_hunk<cr>", { desc = "Go to next hunk" })
