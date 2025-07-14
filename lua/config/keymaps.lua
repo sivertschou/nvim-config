@@ -33,5 +33,10 @@ vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Rese
 vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", { desc = "Blame line" })
 
 -- LSP
-vim.keymap.set("n", "¬", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
-vim.keymap.set("n", "º", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+vim.keymap.set("n", "¬", function()
+  vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Go to next diagnostic" })
+
+vim.keymap.set("n", "º", function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Go to previous diagnostic" })
